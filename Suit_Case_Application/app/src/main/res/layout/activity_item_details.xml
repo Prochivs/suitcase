@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appback"
+    tools:context=".screens.ItemDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/sign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+              >
+
+                <ImageView
+                    android:id="@+id/iimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/back" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/iName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="20dp"
+                android:text="Item name"
+                android:textColorHint="#b5b5bd"
+                android:textColor="#cfbb81"
+                android:textSize="19dp"
+                android:fontFamily="@font/nunitoregular"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+              >
+
+                <TextView
+                    android:id="@+id/iDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:gravity="center_vertical"
+                    android:text="24 December 2023"
+                    android:textColor="#666668"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/iaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:padding="3dp"
+                    android:text="Botswana"
+                    android:textColor="#666668"
+                    android:textSize="16dp" />
+
+                <ImageButton
+                    android:id="@+id/locationButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    app:tint="#cfbb81"
+                    android:backgroundTint="@color/float_transparent"
+                    android:src="@drawable/location" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/iprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:justificationMode="inter_word"
+                android:text="3456"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textColor="#cfbb81" />
+
+            <TextView
+                android:id="@+id/idescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="@font/nunitoregular"
+                android:justificationMode="inter_word"
+                android:text="Lorem ipsum dolor  beatae commodi, deleniti dicta est eveniet ex id, itaque labore maxime perspiciatis placeat, consectetur adipisicing elit. Ad amet beatae commodi, deleniti dicta est eveniet ex id, itaque labore maxime perspiciatis placeat,consectetur adipisicing elit. Ad amet beatae commodi, deleniti dicta est eveniet ex id, itaque labore maxime perspiciatis placeat,consectetur adipisicing elit. Ad amet beatae commodi, deleniti dicta est eveniet ex id, itaque labore maxime perspiciatis placeat,consectetur adipisicing elit. Ad amet beatae commodi, deleniti dicta est eveniet ex id, itaque labore maxime perspiciatis placeat,consectetur adipisicing elit. Ad amet beatae commodi, deleniti dicta est eveniet ex id, itaque labore maxime perspiciatis placeat, provident quia quibusdam ratione recusandae reprehenderit ullam veniam voluptatem"
+                android:textColor="#b5b5bd" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/shareButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:tint="#cfbb81"
+                    android:backgroundTint="@color/float_transparent"
+                    android:src="@drawable/share" />
+
+                <ImageButton
+                    android:id="@+id/editButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:tint="#cfbb81"
+                    android:backgroundTint="@color/float_transparent"
+                    android:src="@drawable/edit1" />
+
+                <ImageButton
+                    android:id="@+id/deleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:tint="#cfbb81"
+                    android:backgroundTint="@color/float_transparent"
+                    android:src="@drawable/delete" />
+
+                <Button
+                    android:id="@+id/purchaseButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/buttonbg"
+                    android:fontFamily="@font/quicksandsemibold"
+                    android:text="Mark as purchased"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:backgroundTint="#cdba7e" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNav"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/nav"
+        app:itemIconTint="#fafafa"
+        android:background="#2b2b33"
+        app:itemTextColor="#fafafa"/>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

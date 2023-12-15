@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appback"
+    tools:context=".screens.ItemAdd">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNav">
+
+        <LinearLayout
+            android:id="@+id/sign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomNav"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"
+                android:text="New Suticase Item"
+                android:textColor="#cfbb81"
+                android:fontFamily="@font/nunitoregular"
+                android:textSize="27dp"
+               />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/entryImage1"
+                    android:layout_width="200dp"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pic" />
+
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="Item Name"
+                android:textSize="18dp"
+                android:fontFamily="@font/nunitoregular"
+                android:textColor="#b5b5bd"
+                />
+
+            <EditText
+                android:id="@+id/entryName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:hint="Please enter item name"
+                android:inputType="text"
+                android:paddingTop="10dp"
+                android:fontFamily="@font/nunitoregular"
+                android:paddingBottom="10dp"
+                android:textColor="#b5b5bd"
+                android:textColorHint="#8FB5B5BD" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/nunitoregular"
+                    android:text="Item Price"
+                    android:textColor="#b5b5bd"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/entryPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Please enter item price"
+                    android:inputType="text"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#cfbb81"
+                    android:fontFamily="@font/nunitoregular"
+                    android:textColorHint="#8FB5B5BD" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Item Location"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/nunitoregular"
+                    android:textColor="#b5b5bd"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                   android:layout_marginBottom="20dp"
+                    android:weightSum="3">
+
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="181dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/nunitoregular"
+                        android:textColor="#b5b5bd" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/float_transparent"
+                        android:onClick="addlocation"
+                        android:src="@drawable/location"
+                        app:tint="#cfbb81"
+                        />
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Item Description"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/nunitoregular"
+                    android:textColor="#b5b5bd"
+                    />
+
+                <EditText
+                    android:id="@+id/entryDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="enter item description"
+                    android:inputType="text"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="14dp"
+                    android:textColor="#b5b5bd"
+                    android:textColorHint="#8FB5B5BD" />
+
+
+
+
+
+                <Button
+                    android:id="@+id/addEntry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/buttonbg"
+                    android:fontFamily="@font/quicksandsemibold"
+                    android:text="Add item"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:backgroundTint="#cdba7e" />
+
+
+</LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNav"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/nav"
+        app:itemIconTint="#fafafa"
+        android:background="#2b2b33"
+        app:itemTextColor="#fafafa"/>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
