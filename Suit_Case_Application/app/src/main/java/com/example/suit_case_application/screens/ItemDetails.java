@@ -165,14 +165,10 @@ public class ItemDetails extends AppCompatActivity {
             public void onClick(View v) {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, name);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, price);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, image);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "   " + description);
-
+                sendIntent.putExtra(Intent.EXTRA_TEXT, " Hie please buy this product for me  " + "Product Name : "+ name + "Product Price: " + price +  "Product Location :" + entryaddress);
                 sendIntent.setType("text/plain");
 
-                Intent shareIntent = Intent.createChooser(sendIntent, null);
+                Intent shareIntent = Intent.createChooser(sendIntent, "Purchase Suitcase Item");
                 startActivity(shareIntent);
             }
         });

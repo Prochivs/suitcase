@@ -11,7 +11,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         >
 
 
@@ -55,8 +54,6 @@
             android:background="@drawable/buttonbg"
             android:layout_marginRight="20dp"
             android:layout_centerHorizontal="true"
-
-
             />
         <TextView
             android:id="@+id/welcomeText3"
@@ -90,6 +87,7 @@
             android:layout_marginTop="0dp"
             android:textAlignment="center"
             android:textSize="20dp"
+            android:textColor="#bbbbbb"
             android:gravity="center_horizontal"
             android:text="No Entries ,Create/ add item"
             android:visibility="invisible" />

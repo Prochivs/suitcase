@@ -17,7 +17,7 @@
         android:id="@+id/purchased"
         android:icon="@drawable/done"
         android:enabled="true"
-        android:title="New" />
+        android:title="Purchased" />
 
     <item
         android:id="@+id/log"
